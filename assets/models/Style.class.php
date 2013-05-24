@@ -2,8 +2,6 @@
 	
 	class Style extends Connection{
 
-		protected $results;
-
 		public static function searchStyle($idStyle){
 			return parent::$db->where('idStyle', $idStyle)->get('styles');
 		}

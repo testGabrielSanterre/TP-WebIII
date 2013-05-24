@@ -2,8 +2,6 @@
 	
 	class Denim extends Connection{
 
-		protected $results;
-
 		public static function searchDenim($idDenim){
 			return parent::$db->where('idDenim', $idDenim)->get('denims');
 		}

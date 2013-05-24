@@ -2,13 +2,6 @@
 	
 	class Page extends Connection{
 
-		/**
-		* Le contenu de la page
-		*
-		* @var string
-		*/
-		protected $results;
-
 		public static function searchPage($idPage){
 			return parent::$db->where('idPage', $idPage)->get('pages');
 		}
