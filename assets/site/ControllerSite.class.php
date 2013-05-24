@@ -7,30 +7,27 @@
 		public function __construct() {
 			$this->oConnection = new Connection();
 			// test unitaire
-			$this->oViewPage = new ViewPage();
 			echo "<hr>";
 			$this->page = Page::searchPage(1);
-			$this->oViewPage->afficherPage($this->page);
+			ViewPage::afficherPage($this->page);
 			echo "<hr>";
 			$this->pages = Page::getListPage();
-			$this->oViewPage->afficherListePages($this->pages);
+			ViewPage::afficherListePages($this->pages);
 			echo "<hr>";
-			$this->oViewStyle = new ViewStyle();
 			echo "<hr>";
 			$this->style = Style::searchStyle(1);
-			$this->oViewStyle->afficherStyle($this->style);
+			ViewStyle::afficherStyle($this->style);
 			echo "<hr>";
 			$this->styles = Style::getListStyle();
-			$this->oViewStyle->afficherListeStyles($this->styles);
+			ViewStyle::afficherListeStyles($this->styles);
 			echo "<hr>";
-			$this->oViewDenim = new ViewDenim();
 			echo "<hr>";
 			$this->denim = Denim::searchDenim(1);
 			$this->style = Style::searchStyle($this->denim[0]['idStyle']);
-			$this->oViewDenim->afficherDenim($this->denim, $this->style);
+			ViewDenim::afficherDenim($this->denim, $this->style);
 			echo "<hr>";
 			$this->denims = Denim::getListDenim();
-			$this->oViewDenim->afficherListeDenims($this->denims);
+			ViewDenim::afficherListeDenims($this->denims);
 			echo "<hr>";
 
 		}
