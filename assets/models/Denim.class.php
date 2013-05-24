@@ -8,17 +8,17 @@
 			parent::__construct();
 		}
 
-		public function searchDenim($idDenim){
-			return $this->db->where('idDenim', $idDenim)->get('denims');
+		public static function searchDenim($idDenim){
+			return parent::$db->where('idDenim', $idDenim)->get('denims');
 		}
 
-		public function getListDenim(){
-			return $this->db->get('denims');
+		public static function getListDenim(){
+			return parent::$db->get('denims');
 		}
 
-		public function modifyPage($idPage, $updateData){
+		public static function modifyPage($idPage, $updateData){
 			$db->where('id', $idPage);
-			$results = $db->update('pages', $updateData);
+			$results = parent::$db->update('pages', $updateData);
 		}
 
 

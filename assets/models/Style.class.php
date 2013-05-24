@@ -4,23 +4,21 @@
 
 		protected $results;
 
-
-
 		public function __construct(){
 			parent::__construct();
 		}
 
-		public function searchStyle($idStyle){
-			return $this->db->where('idStyle', $idStyle)->get('styles');
+		public static function searchStyle($idStyle){
+			return parent::$db->where('idStyle', $idStyle)->get('styles');
 		}
 
-		public function getListStyle(){
-			return $this->db->get('styles',array('idStyle','vchNomStyle','enumCollection'));
+		public static function getListStyle(){
+			return parent::$db->get('styles',array('idStyle','vchNomStyle','enumCollection'));
 		}
 
-		public function modifyPage($idPage, $updateData){
-			$db->where('id', $idPage);
-			$results = $db->update('pages', $updateData);
+		public static function modifyPage($idPage, $updateData){
+			parent::$db->where('id', $idPage);
+			$results = parent::$db->update('pages', $updateData);
 		}
 
 

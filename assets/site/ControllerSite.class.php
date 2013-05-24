@@ -5,34 +5,31 @@
 		private $data = array();
 
 		public function __construct() {
-
+			$this->oConnection = new Connection();
 			// test unitaire
-			$this->oPage = new Page();
 			$this->oViewPage = new ViewPage();
 			echo "<hr>";
-			$this->page = $this->oPage->searchPage(1);
+			$this->page = Page::searchPage(1);
 			$this->oViewPage->afficherPage($this->page);
 			echo "<hr>";
-			$this->pages = $this->oPage->getListPage();
+			$this->pages = Page::getListPage();
 			$this->oViewPage->afficherListePages($this->pages);
 			echo "<hr>";
-			$this->oStyle = new Style();
 			$this->oViewStyle = new ViewStyle();
 			echo "<hr>";
-			$this->style = $this->oStyle->searchStyle(1);
+			$this->style = Style::searchStyle(1);
 			$this->oViewStyle->afficherStyle($this->style);
 			echo "<hr>";
-			$this->styles = $this->oStyle->getListStyle();
+			$this->styles = Style::getListStyle();
 			$this->oViewStyle->afficherListeStyles($this->styles);
 			echo "<hr>";
-			$this->oDenim = new Denim();
 			$this->oViewDenim = new ViewDenim();
 			echo "<hr>";
-			$this->denim = $this->oDenim->searchDenim(1);
-			$this->style = $this->oStyle->searchStyle($this->denim[0]['idStyle']);
+			$this->denim = Denim::searchDenim(1);
+			$this->style = Style::searchStyle($this->denim[0]['idStyle']);
 			$this->oViewDenim->afficherDenim($this->denim, $this->style);
 			echo "<hr>";
-			$this->denims = $this->oDenim->getListDenim();
+			$this->denims = Denim::getListDenim();
 			$this->oViewDenim->afficherListeDenims($this->denims);
 			echo "<hr>";
 

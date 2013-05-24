@@ -15,17 +15,17 @@
 			parent::__construct();
 		}
 
-		public function searchPage($idPage){
-			return $this->db->where('idPage', $idPage)->get('pages');
+		public static function searchPage($idPage){
+			return parent::$db->where('idPage', $idPage)->get('pages');
 		}
 
-		public function getListPage(){
-			return $this->db->get('pages',array('idPage','vchTitrePage'));
+		public static function getListPage(){
+			return parent::$db->get('pages',array('idPage','vchTitrePage'));
 		}
 
-		public function modifyPage($idPage, $updateData){
-			$db->where('id', $idPage);
-			$results = $db->update('pages', $updateData);
+		public static function modifyPage($idPage, $updateData){
+			parent::$db->where('id', $idPage);
+			$results = parent::$db->update('pages', $updateData);
 		}
 
 

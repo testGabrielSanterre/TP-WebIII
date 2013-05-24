@@ -2,10 +2,10 @@
 	
 	class Connection {
 
-		protected $db;
+		public static $db;
 
 		public function __construct(){
-			$this->db = new MysqliDb('localhost', 'root', 'admin', 'tpweb');
+			Connection::$db = new MysqliDb('localhost', 'root', 'admin', 'tpweb');
 		}
 
 	}
