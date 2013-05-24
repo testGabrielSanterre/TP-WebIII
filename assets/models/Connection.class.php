@@ -10,7 +10,7 @@
 		const DB = "tpweb";
 
 		public function __construct($pServer=self::SERVER, $pUser=self::USER, $pPassword=self::PW, $pDB=self::DB){
-			Connection::$db = new MysqliDb($pServer, $pUser, $pPassword, $pDB);
+			self::$db = new MysqliDb($pServer, $pUser, $pPassword, $pDB);
 		}
 
 	}
