@@ -2,7 +2,7 @@
 	
 	class ViewStyle {
 
-		function afficherStyle($style){
+		public static function afficherStyle($style){
 			?>
 
 			<h1><?echo $style[0]['vchNomStyle']?></h1>
@@ -14,7 +14,7 @@
 			<?php
 		}
 
-		function afficherListeStyles($styles){
+		public static function afficherListeStyles($styles){
 			?>
 
 			<ul>

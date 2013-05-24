@@ -2,7 +2,7 @@
 	
 	class ViewPage {
 
-		function afficherPage($page){
+		public static function afficherPage($page){
 			?>
 
 			<h1><?echo $page[0]['vchTitrePage']?></h1>
@@ -14,7 +14,7 @@
 			<?php
 		}
 
-		function afficherListePages($pages){
+		public static function afficherListePages($pages){
 			?>
 
 			<ul>

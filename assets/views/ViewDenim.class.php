@@ -2,7 +2,7 @@
 	
 	class ViewDenim {
 
-		function afficherDenim($denim, $style){
+		public static function afficherDenim($denim, $style){
 			?>
 			<fieldset>
 				<h1><?echo $denim[0]['vchNomDenim']?></h1>
@@ -17,7 +17,7 @@
 			<?php
 		}
 
-		function afficherListeDenims($denims){
+		public static function afficherListeDenims($denims){
 			?>
 
 			<ul>
