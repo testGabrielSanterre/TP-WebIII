@@ -4,10 +4,6 @@
 
 		protected $results;
 
-		public function __construct(){
-			parent::__construct();
-		}
-
 		public static function searchDenim($idDenim){
 			return parent::$db->where('idDenim', $idDenim)->get('denims');
 		}

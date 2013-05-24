@@ -9,12 +9,6 @@
 		*/
 		protected $results;
 
-
-
-		public function __construct(){
-			parent::__construct();
-		}
-
 		public static function searchPage($idPage){
 			return parent::$db->where('idPage', $idPage)->get('pages');
 		}

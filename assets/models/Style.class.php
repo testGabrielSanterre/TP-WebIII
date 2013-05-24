@@ -4,10 +4,6 @@
 
 		protected $results;
 
-		public function __construct(){
-			parent::__construct();
-		}
-
 		public static function searchStyle($idStyle){
 			return parent::$db->where('idStyle', $idStyle)->get('styles');
 		}
