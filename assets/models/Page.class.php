@@ -1,31 +1,7 @@
 <?php
 	
-	class Page {
+	class Page extends Connection{
 
-		// /**
-		// * L'identifiant de la page
-		// *
-		// * @var int
-		// */
-		// protected $iPage;
-		// /**
-		// * Le titre de la page
-		// *
-		// * @var string
-		// */
-		// protected $sTitle;
-		// /**
-		// * Le contenu de la page
-		// *
-		// * @var string
-		// */
-		// protected $sContent;
-		/**
-		* Le contenu de la page
-		*
-		* @var string
-		*/
-		protected $db;
 		/**
 		* Le contenu de la page
 		*
@@ -36,7 +12,7 @@
 
 
 		public function __construct(){
-			$this->db = new MysqliDb('localhost', 'root', 'admin', 'tpweb');
+			parent::__construct();
 		}
 
 		public function searchPage($idPage){

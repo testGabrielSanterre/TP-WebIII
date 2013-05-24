@@ -1,14 +1,13 @@
 <?php
 	
-	class Style {
+	class Style extends Connection{
 
-		protected $db;
 		protected $results;
 
 
 
 		public function __construct(){
-			$this->db = new MysqliDb('localhost', 'root', 'admin', 'tpweb');
+			parent::__construct();
 		}
 
 		public function searchStyle($idStyle){

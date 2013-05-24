@@ -1,14 +1,11 @@
 <?php
 	
-	class Denim {
+	class Denim extends Connection{
 
-		protected $db;
 		protected $results;
 
-
-
 		public function __construct(){
-			$this->db = new MysqliDb('localhost', 'root', 'admin', 'tpweb');
+			parent::__construct();
 		}
 
 		public function searchDenim($idDenim){

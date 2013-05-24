@@ -2,7 +2,9 @@
 
 	/***************************************************/
 	/** Les classes modeles **/
-	/***************************************************/ 
+	/***************************************************/
+
+	require_once("../models/Connection.class.php"); 
 	require_once("../models/Page.class.php");
 	require_once("../models/Style.class.php");
 	require_once("../models/Denim.class.php");
